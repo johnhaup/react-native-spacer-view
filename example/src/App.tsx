@@ -1,18 +1,16 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-spacer-view';
+import { Spacer } from 'react-native-spacer-view';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Spacer safeTop style={styles.red} />
+      <Text>I am right below the safe area top.</Text>
+      <Spacer flex />
+      <Text>I am 24 px above the safe area bottom.</Text>
+      <Spacer safeBottom height={24} style={styles.red} />
     </View>
   );
 }
@@ -23,9 +21,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+  red: {
+    backgroundColor: 'red',
   },
 });
