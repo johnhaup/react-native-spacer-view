@@ -1,6 +1,13 @@
-# react-native-spacer-view
+<div align="center">
+  <h1>react-native-spacer-view</h1>
+  <a href="https://www.youtube.com/watch?v=AZ93S78Nh4E">
+    <img alt="cool alien" width=150 src="space-alien.svg">
+  </a>
+  <p>A little helper view to give you granular control over your layouts.</p>
+</div>
+<hr />
 
-A little helper view to give you granular control over your layouts.
+[![CI](https://github.com/johnhaup/react-native-spacer-view/actions/workflows/ci.yml/badge.svg)](https://github.com/johnhaup/react-native-spacer-view/actions/workflows/ci.yml)
 
 ## Installation
 
