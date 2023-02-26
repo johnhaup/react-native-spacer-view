@@ -57,10 +57,11 @@ export function MyNeatScreen() {
 ```
 
 ## Example App
-You can run an example implementation of how you might use `Spacer` in a `FlatList` by cloning the repo and running the following:
+You can run an [example](example/src/App.tsx) implementation of how you might use `Spacer` in a `FlatList` by cloning this repo and running the following commands:
 ```sh
 cd example
-yarn ios (or yarn android for all you freaks)
+yarn
+yarn ios (or yarn android)
 ```
 ## License
 MIT
