@@ -33,7 +33,6 @@ Extends [ViewProps](https://reactnative.dev/docs/view#props).  Note that view pr
 | safeTop | `boolean` | Adds the device's top safe area inset to the total height of Spacer. |
 | safeBottom | `boolean` | Adds the device's bottom safe area inset to the total height of Spacer. |
 | flex | `true` or `number` | Passing `true` gives Spacer `flex: 1`, passing a number gives Spacer `flex: [number]`. |
-| style | [ViewStyle](https://reactnative.dev/docs/view-style-props) | Adds to Spacer's styles.  All properties take precedence over any other props passed to Spacer. |
 
 ## Usage
 
