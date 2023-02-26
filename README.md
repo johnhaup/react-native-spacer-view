@@ -22,6 +22,8 @@ This component depends on safe area insets provided by [react-native-safe-area-c
 If you already have react-native-safe-area-context in your project, you may need to update the version to match what's used in this library.  Otherwise you'll get a `Tried to register two views to RNCSafeAreaView` error.
 
 ## API
+Extends [ViewProps](https://reactnative.dev/docs/view#props).  Note that view props are applied *last*, so they will take precendence over Spacer's props.  For example, if you pass `flex={2}` and `style={{ flex: 5 }}`, the `flex: 5` will win out.
+
 *All props are optional.*
 
 | Prop | Type | Description |
