@@ -33,7 +33,7 @@ If you already have react-native-safe-area-context in your project, you may need
 | flex | `true` or `number` | Passing `true` gives Spacer `flex: 1`, passing a number gives Spacer `flex: [number]`. |
 | style | [ViewStyle](https://reactnative.dev/docs/view-style-props) | Adds to Spacer's styles.  All properties take precedence over any other props passed to Spacer. |
 
-## Example
+## Usage
 
 ```js
 import { ScrollView } from 'react-native';
@@ -55,6 +55,12 @@ export function MyNeatScreen() {
 }
 ```
 
+## Example App
+You can run an example implementation of how you might use `Spacer` in a `FlatList` by cloning the repo and running the following:
+```sh
+cd example
+yarn ios (or yarn android for all you freaks)
+```
 ## License
 MIT
 
