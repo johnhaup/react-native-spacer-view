@@ -3,7 +3,7 @@ import React from 'react';
 import {
   FlatList,
   ImageBackground,
-  ListRenderItemInfo,
+  type ListRenderItemInfo,
   StyleSheet,
   Text,
 } from 'react-native';
