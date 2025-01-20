@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, View, ViewProps, ViewStyle } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { View, type ViewProps, type ViewStyle } from 'react-native';
+import { useSpacerStyles } from './useSpacerStyles';
 
 interface Props extends ViewProps {
   /**
@@ -23,36 +23,26 @@ interface Props extends ViewProps {
    * Adds the device's bottom safe area inset to the total height of Spacer.
    */
   safeBottom?: boolean;
+  style?: ViewStyle;
 }
 
-export const Spacer = ({
-  flex: injectedFlex,
-  height: propsHeight,
-  width: propsWidth,
+export function Spacer({
+  flex,
+  height,
+  width,
   safeTop,
   safeBottom,
   style = {},
   ...rest
-}: Props) => {
-  const { top, bottom } = useSafeAreaInsets();
-  const flex = injectedFlex
-    ? typeof injectedFlex === 'number'
-      ? injectedFlex
-      : 1
-    : undefined;
-  const width = propsWidth;
-  const safeHeight = (safeTop ? top : 0) + (safeBottom ? bottom : 0);
-  const height =
-    propsHeight && safeHeight
-      ? propsHeight + safeHeight
-      : safeHeight > 0
-      ? safeHeight
-      : propsHeight;
-  const layoutProps = { flex, height, width };
-  const cleanedLayoutProps = Object.fromEntries(
-    Object.entries(layoutProps).filter(([, value]) => !!value)
-  ) as ViewStyle;
-  const spacerStyles = StyleSheet.flatten([cleanedLayoutProps, style]);
+}: Props) {
+  const spacerStyles = useSpacerStyles({
+    flex,
+    height,
+    width,
+    safeTop,
+    safeBottom,
+    style,
+  });
 
   return <View style={spacerStyles} pointerEvents={'box-none'} {...rest} />;
-};
+}
